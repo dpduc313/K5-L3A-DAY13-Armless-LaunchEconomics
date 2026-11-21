@@ -83,3 +83,54 @@ Mỗi thành viên có một báo cáo riêng trong thư mục `report/team/`:
 ### Bằng chứng
 - Code chạy hoàn tất trong `src/lab13.py`.
 - Các file tài liệu: `report/team/bang_chi_phi.md`, `report/team/pilot_plan.yaml`, `report/team/chi_so.md`, `report/team/ho_so_launch_v0.md`, `report/team/group_report.md`, `report/team/phieu_cham.md`, `report/team/2A202603544_NguyenDucDat.md`.
+
+---
+
+## Đỗ Cao Cường — 2A202603612
+
+### Phần việc phụ trách
+
+- Người gắn nhãn 1, kiêm theo dõi điều kiện "Xong khi" của CP1–CP5 và soát từng PR trước khi merge.
+- Chia vai và lập quy trình nhánh, PR cho nhóm (`PHAN_CONG.md`).
+- CP3: gắn nhãn độc lập 20 ca, tổng hợp `report/team/bang_loi.md`.
+- CP4: soạn cách chia và năm câu D2 "tách được tác động" gửi người viết code.
+- CP5: soạn `report/team/chi_so.md`.
+
+### Đóng góp cụ thể
+
+- Soát CP1, CP2: chạy `lab13.py`, đối chiếu A1–A4 và B1–B4 với số tham khảo, tất cả khớp (4.472 đ mỗi việc thành công [simulated]; B4 lệch 1 đ do làm tròn).
+- CP3: tự gắn 20 nhãn không dùng AI; hai quy tắc phân biệt loại lỗi; bảng khắc phục 5 ca (ca 1, 7, 18, 13, 17), mỗi dòng có cách phát hiện đo được và một vai trò phụ trách; ghi rõ bộ nhãn người 2 ban đầu có AI đề xuất.
+- CP4: đề xuất chia theo nhân viên 20 + 20, chấp nhận mức chênh 6 điểm; năm câu D2, dòng đánh đổi, trường `identifiability`; tính khả thi khoảng 31 yêu cầu/người/ngày, đạt 299 yêu cầu sau khoảng 10 ngày làm việc.
+- CP5: ba chỉ số tính thử (82,83% · 27,12% · 4,25%), hai chỉ số tự đề xuất, 10 event có `trace_id`, kiểm tra chéo chỉ số với event, hai dòng rủi ro kinh tế.
+- Soát `main` sau CP4: phát hiện câu D2 số 4 ghi nhầm ngày quyết định là ngày bắt đầu, báo người viết code sửa.
+
+### Bằng chứng
+
+- PR #1 `docs/phan-cong`: commit `2e689b7`, `5248387` (`PHAN_CONG.md`, `TEAM.md`).
+- PR #3 `feat/cp3-error-table`: commit `64702f2` (`report/team/bang_loi.md`).
+- PR #4 `feat/cp5-metrics`: commit `4397eab` (`report/team/chi_so.md`, phần E1, event, kiểm tra chéo).
+- PR #6 `feat/cp5-e2-risks`: commit `7931055` (`report/team/chi_so.md`, phần E2).
+- Báo cáo cá nhân: `report/team/2A202603612_DoCaoCuong.md`.
+
+---
+
+## Nguyễn Văn Minh — 2A202603551
+
+### Phần việc phụ trách
+
+- Giữ hồ sơ launch v0 (`report/team/ho_so_launch_v0.md`) từ đầu buổi.
+- Ban đầu kiêm người gắn nhãn 2 ở CP3; bộ nhãn này bị nhóm thay bằng bộ Đạt gắn lại (xem `report/team/bang_loi.md`).
+- Kiểm tra cấu trúc `pilot_plan.yaml` ở CP4.
+
+### Đóng góp cụ thể
+
+- Hồ sơ launch v0: dựng khung đủ 7 mục, cập nhật lần lượt theo CP1–CP2, CP3, CP4–CP5 và góp ý Gate 2a; tự tính lại từ CSV 978/1.200 ca thành công, tổng chi phí 4.373.585 đ và 4.472 đ/việc [simulated].
+- Tính thử ba chỉ số CP5 từ CSV (994/1.200 = 82,83%, 48/177 = 27,12%, 51/1.200 = 4,25%) để đối chiếu với `chi_so.md`.
+- CP3: 20 nhãn do ChatGPT đề xuất rồi Minh chấp thuận, lưu tại `report/team/nhan_cp3_Minh.md` để đối chiếu; không dùng để tính đồng thuận vì không đạt yêu cầu gắn độc lập.
+- CP4: viết công cụ kiểm tra `pilot_plan.yaml` bằng PyYAML (đọc file, rà trường bắt buộc, dấu `?`, câu D1/D2, luật dừng); lần chạy đầu trên bản nháp phát hiện còn 15 dòng có dấu `?`.
+
+### Bằng chứng
+
+- Hồ sơ launch v0: commit `19c2bb8` (số CP1–CP2), `3203283` (kết quả CP3), `a001964` (sửa theo góp ý Gate 2a), `673ba0e` (bằng chứng CP4, CP5), đều đã nằm trong `main`.
+- Phiếu nhãn CP3 ban đầu: `report/team/nhan_cp3_Minh.md`.
+- Báo cáo cá nhân: `report/team/2A202603551_NguyenVanMinh.md`.
