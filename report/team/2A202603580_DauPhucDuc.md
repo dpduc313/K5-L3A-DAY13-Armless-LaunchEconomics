@@ -4,9 +4,9 @@
 
 - Họ tên: Đậu Phúc Đức
 - MSSV: 2A202603580
-- Email: [Đức điền]
+- Email: teflon125.work@gmail.com
 - GitHub: dpduc313
-- Vai trong nhóm: người viết code (trước giải lao), người kiểm số (sau giải lao)
+- Vai trong nhóm: người viết code, người kiểm số
 
 ## 2. Phần việc phụ trách
 
@@ -38,4 +38,7 @@
 
 ## 6. Tự đánh giá
 
-[Đức tự viết: điều làm tốt, điều sẽ làm khác, điều học được về chi phí mỗi việc thành công và thiết kế pilot.]
+- Làm tốt phần việc cá nhân và tham gia vào tiến độ nhóm nhanh, hiệu quả. Kịp tiến độ đưa ra.
+
+
+- Làm chưa tốt: Mất nhiều thời gian đọc đề, grill và đưa ra phương án tiếp cận bài toán, phân công công việc. 
