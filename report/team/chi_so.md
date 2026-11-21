@@ -44,5 +44,5 @@ Chỉ số trong đợt chạy thử là 82,83%. Không viết "trợ lý đã n
 
 | Rủi ro | Tác động đã tính | Dấu hiệu theo dõi | Hành động | Người phụ trách |
 | --- | --- | --- | --- | --- |
-| ⏳ chờ anh Đức | | | | |
-| ⏳ chờ anh Đức | | | | |
+| Số ca làm lại tăng gấp đôi | +51,8%, chi phí mỗi việc thành công lên 6.787 đ (B1) [simulated] | Tỉ lệ làm lại theo tuần (`staff_rework_completed` ÷ `refund_request_created`) > 7%; đợt chạy thử: 4,9% trong phạm vi (48/982) | Thu hẹp về `noi_dia`, rà 20 trace làm lại gần nhất trong 3 ngày | PM trợ lý hoàn phí |
+| Phải xem lại 100% kéo dài | 11.743 đ = 0,98× của 12.000 đ; 12.415 đ = 1,03× nếu làm lại 15,3 phút như dữ liệu (B4) [simulated] | % yêu cầu được xem lại (`staff_review_decision`) còn > 50% ở cuối bước rollout 0,25 | Giảm xem lại theo bậc khi tỉ lệ sửa + bỏ < 15% hai tuần liên tiếp | Trưởng nhóm CSKH |
