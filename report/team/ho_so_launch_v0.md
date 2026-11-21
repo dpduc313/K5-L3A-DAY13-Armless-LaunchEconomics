@@ -2,7 +2,7 @@
 
 **Nhóm:** Armless · **Lớp:** L3A · **Trạng thái:** Bản tổng hợp đang cập nhật, **chưa chốt đề xuất**.
 
-> Dữ liệu Lab 13 là giả lập. Mọi chi phí dùng hai cột `_simulated` đều gắn nhãn **simulated**. Số CP1–CP2 lấy từ `origin/cp1-cp2-chi-phi` (chưa merge vào `main` tại lúc tổng hợp), đối chiếu lại bằng phép tính trực tiếp từ CSV; ba chỉ số CP5 bên dưới do Minh tính thử từ CSV và **chưa được nhóm CP5 xác nhận**.
+> Dữ liệu Lab 13 là giả lập. Mọi chi phí dùng hai cột `_simulated` đều gắn nhãn **simulated**. Số CP1–CP2 đã được merge vào `main` tại commit `89f10e8`, đối chiếu lại bằng phép tính trực tiếp từ CSV; ba chỉ số CP5 bên dưới do Minh tính thử từ CSV và **chưa được nhóm CP5 xác nhận**.
 
 | Mục | Con số chính và bằng chứng | Trạng thái | Người phụ trách (vai trò) |
 | --- | --- | --- | --- |
@@ -10,7 +10,7 @@
 | **2 · Ba yếu tố nhạy nhất** | CP2/B1: **làm lại +51,8%**, **xem lại +40,7%**, **lương nhân viên +25% → chi phí +23,1%** [simulated]. Giá token gấp đôi chỉ **+5,6%**. | Giả lập | Người kiểm số CP2 |
 | **3 · So với nhân viên tự làm** | Mốc **12.000 đ/yêu cầu**. Khi tính cả **222 ca nhân viên làm thay**, toàn hệ thống **5.865 đ/yêu cầu [simulated]** trên mẫu 1.200. Phạm vi `noi_dia` + `hang_nang`: **4.599 đ/việc thành công [simulated]** đã cộng **40 triệu đ/tháng** cố định ở giả định **45.000 yêu cầu/tháng** (A4). | Giả lập | Người kiểm số CP1 |
 | **4 · Chỉ số chính, dùng, an toàn** | **Tạm tính trực tiếp từ CSV:** đóng trong 24 giờ và không mở lại 7 ngày **994/1.200 = 82,83%**; sửa/bỏ gợi ý **48/177 = 27,12%**; mở lại trong 7 ngày **51/1.200 = 4,25%**. **Chờ Cường/Đạt xác nhận CP5**. | Chưa | Phụ trách chỉ số CP5 |
-| **5 · Bảng lỗi và khắc phục** | **20** ca lỗi thuộc **5** loại, yêu cầu hai bộ nhãn độc lập đồng thuận ít nhất **16/20 = 80%** và **5** biện pháp có event/ngưỡng/người phụ trách. Chưa có kết quả xác nhận giữa Minh và Cường. | Chưa | Người gắn nhãn 1 CP3 |
+| **5 · Bảng lỗi và khắc phục** | CP3 đã có **20/20 nhãn trùng nhau (100%)** và **5/5 loại lỗi** có biện pháp khắc phục kèm phát hiện đo được và vai trò phụ trách (nguồn `report/team/bang_loi.md`, main `8da7efd`). **Chưa đạt yêu cầu gắn nhãn độc lập**, do bộ nhãn của Minh do AI đề xuất và Minh chấp thuận; tỷ lệ 100% chỉ mang ý nghĩa đối chiếu hai bảng. | Chưa | Người gắn nhãn 1 CP3 |
 | **6 · Pilot plan** | Giả định đầu bài: baseline **70%**, mục tiêu **75%** (MDE **+5 điểm**), α **0,05**, power **0,80**, ICC **0,02**. Chờ CP4 xác nhận cỡ mẫu, đơn vị phân nhóm, đối chứng, ≥**3** luật dừng và rollback. | Chưa | Người viết code CP4 |
 | **7 · Rủi ro kinh tế** | **Ứng viên từ CP2, chờ CP5:** (i) ca làm lại gấp đôi làm chi phí tăng **51,8%**; (ii) xem lại gấp đôi làm chi phí tăng **40,7%** [simulated]. Kịch bản **xem lại 100%** tại `noi_dia` + `hang_nang` lên **11.743 đ/việc [simulated]**, sát mốc 12.000 đ. | Chưa | Phụ trách rủi ro CP5 |
 
