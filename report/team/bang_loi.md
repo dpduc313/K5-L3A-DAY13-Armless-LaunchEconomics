@@ -6,7 +6,7 @@
 
 Người gắn nhãn 1: Cường · Người gắn nhãn 2: Đạt
 
-> **Lịch sử bộ nhãn người 2:** lần gắn đầu, người 2 là Minh, nhưng 20 nhãn do ChatGPT đề xuất rồi Minh chấp thuận (`report/team/nhan_cp3_Minh.md` trên nhánh `docs/report-minh`), nên không đạt yêu cầu gắn độc lập. Cả nhóm thống nhất bỏ bộ đó và để Đạt gắn lại: Đạt tự gắn cả 20 ca trong khoảng 8 phút (xong trước 16:40), trên phiếu chỉ có mô tả ca và định nghĩa năm loại, không dùng AI, không trao đổi, chưa xem bộ nhãn nào trước đó. Việc thay người gắn là quyết định của nhóm, chưa hỏi ý kiến giảng viên.
+> **Lịch sử bộ nhãn người 2:** lần gắn đầu, người 2 là Minh, nhưng 20 nhãn do ChatGPT đề xuất rồi Minh chấp thuận (lưu tại `report/team/nhan_cp3_Minh.md` để đối chiếu, không dùng để tính đồng thuận), nên không đạt yêu cầu gắn độc lập. Cả nhóm thống nhất bỏ bộ đó và để Đạt gắn lại: Đạt tự gắn cả 20 ca trong khoảng 8 phút (xong trước 16:40), trên phiếu chỉ có mô tả ca và định nghĩa năm loại, không dùng AI, không trao đổi, chưa xem bộ nhãn nào trước đó. Việc thay người gắn là quyết định của nhóm, chưa hỏi ý kiến giảng viên.
 
 | Ca | Nhãn người 1 (Cường) | Nhãn người 2 (Đạt) | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- |
