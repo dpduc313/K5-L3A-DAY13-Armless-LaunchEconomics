@@ -12,9 +12,9 @@
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 | Đậu Phúc Đức | 2A202603580 | teflon125.work@gmail.com      | https://github.com/dpduc313 | Người viết code (trước giải lao) → người kiểm số |
-|   2 | Nguyễn Đức Đạt | 2A202603544 |       |        | Người kiểm số (trước giải lao) → người viết code |
+|   2 | Nguyễn Đức Đạt | 2A202603544 |       |        | Người kiểm số (trước giải lao) → người viết code; người gắn nhãn 2 ở CP3 (thay Minh) |
 |   3 | Đỗ Cao Cường | 2A202603612 | 26ai.cuongdc@vinuni.edu.vn | https://github.com/cuongdc03 | Người gắn nhãn 1 |
-|   4 | Nguyễn Văn Minh | 2A202603551 | minhvjjp@gmail.com | https://github.com/killy-mv/ | Người gắn nhãn 2, kiêm giữ hồ sơ |
+|   4 | Nguyễn Văn Minh | 2A202603551 | minhvjjp@gmail.com | https://github.com/killy-mv/ | Giữ hồ sơ (bộ nhãn CP3 của Minh bị bỏ vì có AI đề xuất, xem `bang_loi.md`) |
 
 Bốn vai của lab:
 
