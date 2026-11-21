@@ -13,7 +13,7 @@
 #   1. Đối chứng chạy cùng thời gian: Có, 20 nhân viên đối chứng làm cùng tuần, cùng depot.
 #   2. Chia ngẫu nhiên hay do người chọn: Bốc thăm ngẫu nhiên bằng code với seed ghi trước, phân tầng theo depot.
 #   3. Ảnh hưởng gián tiếp và cách giảm: Có rủi ro chia sẻ câu trả lời trong depot; giảm bằng phân quyền theo tài khoản và log lượt mở trợ lý theo staff_id.
-#   4. Chỉ số chính, ngưỡng, ngày quyết định đã viết trước: Có, chốt trước ngày bắt đầu pilot (2027-01-05).
+#   4. Chỉ số chính, ngưỡng, ngày quyết định đã viết trước: Có, chốt chỉ số chính, ngưỡng, luật dừng và ngày quyết định (2027-01-05) trước ngày bắt đầu pilot.
 #   5. Ít nhất 20 cụm mỗi nhóm: Có, đúng 20 nhân viên mỗi nhóm.
 #
 # Đánh đổi đã chấp nhận (nếu cách chia chưa đạt cả hai điều kiện):
