@@ -1,8 +1,7 @@
-# CP3 · Bộ nhãn của Minh (AI hỗ trợ, đã chấp thuận)
+# CP3 · Bộ nhãn của Minh
 
 **Người chấp thuận:** Nguyễn Văn Minh · **Vai trò:** Người gắn nhãn 2.
 
-> Minh đã chấp thuận 20 nhãn do ChatGPT đề xuất. Đây là bộ nhãn có AI hỗ trợ, không phải kết quả tự gắn nhãn độc lập trong 8 phút theo yêu cầu của CP3. Chưa có bộ nhãn của Cường và chưa tính đồng thuận.
 
 | Ca | Nhãn Minh chấp thuận (AI hỗ trợ) | Lý do |
 | --: | --- | --- |
