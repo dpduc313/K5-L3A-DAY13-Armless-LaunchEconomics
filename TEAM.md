@@ -2,19 +2,19 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
-- Lớp: L3A hoặc L3B
-- Repo nhóm: `K5-L3A-DAY13-TenNhom-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt:
+- Tên nhóm: Armless
+- Lớp: L3A
+- Repo nhóm: `K5-L3A-DAY13-Armless-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
+- URL repo, nhánh nộp, commit chốt: https://github.com/dpduc313/K5-L3A-DAY13-Armless-LaunchEconomics · `main` · (điền khi chốt)
 
 ## Thành viên
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |        |      |       |        |         |
-|   2 |        |      |       |        |         |
-|   3 |        |      |       |        |         |
-|   4 |        |      |       |        |         |
+|   1 | Đức |      |       |        | Người viết code (trước giải lao) → người kiểm số |
+|   2 | Đạt |      |       |        | Người kiểm số (trước giải lao) → người viết code |
+|   3 | Cường |      |       |        | Người gắn nhãn 1 |
+|   4 | Minh |      |       |        | Người gắn nhãn 2, kiêm giữ hồ sơ |
 
 Bốn vai của lab:
 
@@ -24,6 +24,8 @@ Bốn vai của lab:
 - **Người gắn nhãn 2, kiêm giữ hồ sơ:** điền `report/team/ho_so_launch_v0.md` từ đầu buổi; gắn nhãn 20 ca độc lập ở CP3.
 
 Đổi người viết code sau giờ giải lao, để ít nhất hai người trong nhóm tự tay tính được chi phí.
+
+Phân công chi tiết, nhánh và PR: [PHAN_CONG.md](PHAN_CONG.md).
 
 ## Cá nhân
 
