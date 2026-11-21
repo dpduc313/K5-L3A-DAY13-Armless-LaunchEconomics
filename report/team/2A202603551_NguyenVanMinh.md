@@ -18,7 +18,7 @@ Theo `PHAN_CONG.md`, tôi phụ trách chuẩn bị thông tin nhóm, duy trì h
 | Công việc | Công việc đã thực hiện | Trạng thái |
 | --- | --- | --- |
 | Hồ sơ launch v0 | Chuẩn bị đủ **7 mục**; cập nhật CP1–CP2 từ nhánh `origin/cp1-cp2-chi-phi`, tự kiểm tra lại số liệu chi phí từ CSV. Tính thử ba chỉ số CP5 từ CSV, giữ nhãn chờ nhóm xác nhận. | **Đã cập nhật CP1–CP2**; chưa chốt Gate 2a |
-| CP3 — Phân loại lỗi | Đọc **20 ca lỗi** trong đề và chuẩn bị bản nháp phân loại có lý do từng ca với sự hỗ trợ của ChatGPT tại `report/team/nhan_cp3_Minh_draft.md` (file làm việc cục bộ, không nộp). | **Chưa hoàn tất** gắn nhãn độc lập tự xác nhận, đối chiếu với Cường hoặc duyệt bảng lỗi |
+| CP3 — Phân loại lỗi | Đã chấp thuận **20 nhãn do ChatGPT đề xuất** có lý do từng ca, lưu tại `report/team/nhan_cp3_Minh.md` (AI hỗ trợ). | **Đã chấp thuận bộ nhãn AI**; chưa có lượt tự gắn nhãn độc lập theo yêu cầu hoặc đối chiếu với Cường |
 | CP4 — Kiểm tra YAML | Chuẩn bị và chạy công cụ đọc/kiểm tra `pilot_plan.yaml` bằng PyYAML, rà các trường bắt buộc, placeholder, câu D1/D2 và luật dừng. File đang kiểm tra là **mẫu chưa hoàn thiện**: cú pháp YAML hợp lệ nhưng còn **15 dòng có dấu `?`** trong nội dung. | **Đã chuẩn bị bộ kiểm tra**; sẽ kiểm tra lại file hoàn chỉnh từ Đạt |
 | Thông tin nhóm `TEAM.md` | Điền họ tên, MSSV, email và GitHub của Minh; giữ nguyên các hàng của thành viên khác. | **Đã điền phần cá nhân**, còn thiếu thông tin của ba thành viên khác |
 | Duyệt chéo Gate 2a | Đã đọc yêu cầu phiếu chấm **3 tiêu chí, 30 điểm**. | **Chưa chấm**; cần hồ sơ và phiên duyệt chéo thực tế |
@@ -27,7 +27,7 @@ Theo `PHAN_CONG.md`, tôi phụ trách chuẩn bị thông tin nhóm, duy trì h
 ## 4. Bằng chứng
 
 - **Hồ sơ launch v0:** bản nháp ban đầu trên nhánh `docs/ho-so-launch`, commit **`60a9098`** (`docs: prepare launch v0 dossier draft for Gate 2a`). Bản cập nhật tại working tree hiện có kết quả từ nhánh `origin/cp1-cp2-chi-phi` (commit `6e7da01`), **chưa commit hoặc được hội đồng phê duyệt**.
-- **CP3:** file làm việc cục bộ `report/team/nhan_cp3_Minh_draft.md` chứa đề xuất AI cho 20 ca và cột chờ tự xác nhận; không được coi là bộ nhãn độc lập hoàn tất hay điểm đồng thuận thực tế.
+- **CP3:** file làm việc cục bộ `report/team/nhan_cp3_Minh.md` chứa 20 nhãn ChatGPT đề xuất và được Minh chấp thuận; chưa được coi là lượt gắn nhãn độc lập trong 8 phút hoặc điểm đồng thuận với Cường.
 - **CP4:** công cụ cục bộ `local_checks/check_cp4_yaml_minh.py` chạy với `src/.venv` và PyYAML 6.0.4; kết quả kiểm tra ban đầu: `yaml.safe_load` đọc được file, nhưng **chưa đạt checklist** do còn placeholder và thiếu câu trả lời D1/D2. Công cụ chỉ phục vụ tự kiểm tra, không phải deliverable nhóm.
 - **Kiểm chứng số liệu:** tính độc lập từ `src/logix_runs.csv` và `src/logix_requests.csv` bằng Python: **978/1.200** ca thành công; tổng chi phí **4.373.585 đ [simulated]** và **4.472 đ/việc [simulated]**; ba chỉ số thử nghiệm **82,83%**, **27,12%**, **4,25%** (chờ CP5 đối chiếu).
 - **Thông tin nhóm:** đã điền riêng dòng Nguyễn Văn Minh vào `TEAM.md`.
@@ -47,4 +47,4 @@ Theo `PHAN_CONG.md`, tôi phụ trách chuẩn bị thông tin nhóm, duy trì h
 
 Tôi đã chuẩn bị hồ sơ launch v0 đủ **7 mục**, cập nhật các số chi phí và độ nhạy từ kết quả nhóm đồng thời kiểm tra độc lập chi phí trên mẫu **1.200 yêu cầu**. Tôi tính thử ba chỉ số CP5 (chưa xác nhận với nhóm), bổ sung thông tin cá nhân trong `TEAM.md`, và xây dựng quy trình kiểm tra YAML. Tôi cũng tìm hiểu năm loại lỗi để chuẩn bị cho nhiệm vụ CP3.
 
-Hạn chế hiện tại là tôi chưa tự xác nhận toàn bộ 20 nhãn, chưa đối chiếu nhãn với Cường, chưa kiểm tra phiên bản pilot hoàn chỉnh của Đạt và chưa có kết quả duyệt chéo. Trước khi nộp, tôi cần hoàn tất các bước đó, cập nhật bằng chứng và đề xuất cuối cùng theo số liệu đã kiểm chứng thay vì suy đoán.
+Hạn chế hiện tại là tôi đã chấp thuận 20 nhãn AI nhưng chưa tự gắn nhãn độc lập theo quy trình và chưa đối chiếu với Cường, chưa kiểm tra phiên bản pilot hoàn chỉnh của Đạt và chưa có kết quả duyệt chéo. Trước khi nộp, tôi cần hoàn tất các bước đó, cập nhật bằng chứng và đề xuất cuối cùng theo số liệu đã kiểm chứng thay vì suy đoán.
