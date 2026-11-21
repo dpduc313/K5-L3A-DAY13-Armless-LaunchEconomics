@@ -6,6 +6,7 @@ Mọi số tính từ cột *_simulated được in kèm nhãn [simulated].
 """
 import math
 import sys
+from statistics import NormalDist
 
 import pandas as pd
 
@@ -199,6 +200,58 @@ def b4_xem_lai_tat_ca(runs, reqs, phut_xem=5, phut_lam_lai=9):
               f'hoà vốn khi mỗi lần xem lại ≤ {hoa_von:.1f} phút {SIM}')
 
 
+# ---------- Nhiệm vụ D · Cỡ mẫu và tỉ lệ mở lại hiện tại ----------
+def co_mau(p1, p2, alpha=0.05, power=0.8):
+    """Cỡ mẫu mỗi nhóm (hai phía) để phát hiện mức chênh từ p1 lên p2."""
+    za = NormalDist().inv_cdf(1 - alpha / 2)
+    zb = NormalDist().inv_cdf(power)
+    pb = (p1 + p2) / 2
+    return math.ceil(
+        (za * math.sqrt(2 * pb * (1 - pb))
+         + zb * math.sqrt(p1 * (1 - p1) + p2 * (1 - p2))) ** 2 / (p2 - p1) ** 2
+    )
+
+
+def d_co_mau_pilot(reqs, p1=0.70, alpha=0.05, power=0.80, icc=0.02):
+    tieu_de('D1 · Cỡ mẫu theo ba cách chia (baseline 0,70; alpha 0,05; power 0,8; ICC 0,02)')
+    n_yc = co_mau(p1, p1 + 0.05, alpha, power)
+    de_75 = 1 + (75 - 1) * icc
+    n_nv = math.ceil(n_yc * de_75)
+    so_nv = math.ceil(n_nv / 75)
+    gioi_han_nv = int(20 / icc)
+    gioi_han_depot = int(6 / icc)
+    n_6diem = co_mau(p1, p1 + 0.06, alpha, power)
+    m_min = math.ceil(n_6diem * (1 - icc) / (20 - n_6diem * icc))
+    de_6diem = 1 + (m_min - 1) * icc
+
+    print(f'a) Chia theo yêu cầu (+5 điểm): {n_yc:,} yêu cầu mỗi nhóm')
+    print(f'b) Theo nhân viên, m = 75 (DE = {de_75:.2f}): {n_nv:,} yêu cầu/nhóm '
+          f'→ {so_nv} người/nhóm (tổng {so_nv * 2} > 40: không đủ người)')
+    print(f'c) 20 nhân viên mỗi nhóm: n hiệu dụng tối đa = {gioi_han_nv:,} < {n_yc:,} (không đạt)')
+    print(f'd) 6 depot mỗi nhóm: n hiệu dụng tối đa = {gioi_han_depot:,}')
+    print(f'e) Mức chênh 6 điểm ({n_6diem:,}/nhóm), 20 người/nhóm: m ≥ {m_min} yêu cầu/người '
+          f'(DE = {de_6diem:.2f})')
+
+    tieu_de('D3 · Tỉ lệ mo_lai_trong_7_ngay hiện tại')
+    tong_ml = int((reqs['mo_lai_trong_7_ngay'] == 1).sum())
+    r_pv = reqs[reqs['loai'].isin(PHAM_VI)]
+    pv_ml = int((r_pv['mo_lai_trong_7_ngay'] == 1).sum())
+    print(f'Toàn bộ 1.200 yêu cầu: {reqs["mo_lai_trong_7_ngay"].mean():.2%} ({tong_ml}/{len(reqs)})')
+    print(f'Trong phạm vi noi_dia + hang_nang: {r_pv["mo_lai_trong_7_ngay"].mean():.2%} ({pv_ml}/{len(r_pv)})')
+
+
+# ---------- Nhiệm vụ E1 · Ba chỉ số tính thử ----------
+def e1_chi_so(reqs):
+    tieu_de('E1 · Ba chỉ số tính thử trên 1.200 yêu cầu')
+    chinh_mask = (reqs['dong_trong_24h'] == 1) & (reqs['mo_lai_trong_7_ngay'] == 0)
+    xem = reqs[reqs['duoc_xem_lai'] == 1]
+    bo_qua_mask = xem['quyet_dinh_xem_lai'].isin(['sua', 'bo'])
+    an_toan_mask = reqs['mo_lai_trong_7_ngay'] == 1
+    print(f'Chính (% đóng 24h & không mở lại 7 ngày): {chinh_mask.mean():.2%} ({int(chinh_mask.sum())}/{len(reqs)})')
+    print(f'Dùng (tỉ lệ bỏ qua gợi ý: sua + bo / xem lại): {bo_qua_mask.mean():.2%} ({int(bo_qua_mask.sum())}/{len(xem)})')
+    print(f'An toàn (lỗi lọt đến khách: mở lại 7 ngày): {an_toan_mask.mean():.2%} ({int(an_toan_mask.sum())}/{len(reqs)})')
+
+
 if __name__ == '__main__':
     runs = pd.read_csv('logix_runs.csv')
     reqs = pd.read_csv('logix_requests.csv', keep_default_na=False)
@@ -208,6 +261,5 @@ if __name__ == '__main__':
     a4_co_dinh(runs, reqs)
     b_do_nhay(runs, reqs)
     b4_xem_lai_tat_ca(runs, reqs)
-    # TODO CP4 · Nhiệm vụ D: cỡ mẫu.
-    #   from statsmodels.stats.proportion import proportion_effectsize
-    #   from statsmodels.stats.power import NormalIndPower
+    d_co_mau_pilot(reqs)
+    e1_chi_so(reqs)
