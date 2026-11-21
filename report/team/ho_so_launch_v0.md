@@ -1,21 +1,19 @@
 # Hồ sơ launch v0 · Trợ lý hoàn phí LogiX-VN · Gate 2a
 
-**Nhóm:** Armless · **Lớp:** L3A · **Trạng thái:** Bản tổng hợp đang cập nhật, **chưa chốt đề xuất**.
+**Nhóm:** Armless · **Lớp:** L3A · **Phiên bản:** Dự thảo, chờ biểu quyết theo lịch nhóm 16:50.
 
-> Dữ liệu Lab 13 là giả lập. Mọi chi phí dùng hai cột `_simulated` đều gắn nhãn **simulated**. Số CP1–CP2 đã được merge vào `main` tại commit `89f10e8`, đối chiếu lại bằng phép tính trực tiếp từ CSV; ba chỉ số CP5 bên dưới do Minh tính thử từ CSV và **chưa được nhóm CP5 xác nhận**.
+> Các chi phí có dùng cột `_simulated` được ghi **[simulated]**; các tỷ lệ E1 là số tính thử trên dữ liệu giả lập, không chứng minh tác động nhân quả. Gate 2a chỉ xét kế hoạch pilot.
 
-| Mục | Con số chính và bằng chứng | Trạng thái | Người phụ trách (vai trò) |
+| Mục | Con số / bằng chứng chính | Trạng thái | Người phụ trách |
 | --- | --- | --- | --- |
-| **1 · Chi phí mỗi việc thành công** | **978/1.200** yêu cầu thành công; **4.472 đ/việc [simulated]**, tổng **4.373.585 đ [simulated]** từ **1.624** lượt chạy (A2). | Giả lập | Người viết code CP1 |
-| **2 · Ba yếu tố nhạy nhất** | CP2/B1: **làm lại +51,8%**, **xem lại +40,7%**, **lương nhân viên +25% → chi phí +23,1%** [simulated]. Giá token gấp đôi chỉ **+5,6%**. | Giả lập | Người kiểm số CP2 |
-| **3 · So với nhân viên tự làm** | Mốc **12.000 đ/yêu cầu**. Khi tính cả **222 ca nhân viên làm thay**, toàn hệ thống **5.865 đ/yêu cầu [simulated]** trên mẫu 1.200. Phạm vi `noi_dia` + `hang_nang`: **4.599 đ/việc thành công [simulated]** đã cộng **40 triệu đ/tháng** cố định ở giả định **45.000 yêu cầu/tháng** (A4). | Giả lập | Người kiểm số CP1 |
-| **4 · Chỉ số chính, dùng, an toàn** | **Tạm tính trực tiếp từ CSV:** đóng trong 24 giờ và không mở lại 7 ngày **994/1.200 = 82,83%**; sửa/bỏ gợi ý **48/177 = 27,12%**; mở lại trong 7 ngày **51/1.200 = 4,25%**. **Chờ Cường/Đạt xác nhận CP5**. | Chưa | Phụ trách chỉ số CP5 |
-| **5 · Bảng lỗi và khắc phục** | CP3 đã có **20/20 nhãn trùng nhau (100%)** và **5/5 loại lỗi** có biện pháp khắc phục kèm phát hiện đo được và vai trò phụ trách (nguồn `report/team/bang_loi.md`, main `8da7efd`). **Chưa đạt yêu cầu gắn nhãn độc lập**, do bộ nhãn của Minh do AI đề xuất và Minh chấp thuận; tỷ lệ 100% chỉ mang ý nghĩa đối chiếu hai bảng. | Chưa | Người gắn nhãn 1 CP3 |
-| **6 · Pilot plan** | Giả định đầu bài: baseline **70%**, mục tiêu **75%** (MDE **+5 điểm**), α **0,05**, power **0,80**, ICC **0,02**. Chờ CP4 xác nhận cỡ mẫu, đơn vị phân nhóm, đối chứng, ≥**3** luật dừng và rollback. | Chưa | Người viết code CP4 |
-| **7 · Rủi ro kinh tế** | **Ứng viên từ CP2, chờ CP5:** (i) ca làm lại gấp đôi làm chi phí tăng **51,8%**; (ii) xem lại gấp đôi làm chi phí tăng **40,7%** [simulated]. Kịch bản **xem lại 100%** tại `noi_dia` + `hang_nang` lên **11.743 đ/việc [simulated]**, sát mốc 12.000 đ. | Chưa | Phụ trách rủi ro CP5 |
+| 1 · Chi phí/việc thành công | **978/1.200** thành công; **4.472 đ/việc [simulated]** trên tổng **4.373.585 đ [simulated]** (CP1/A2). | Giả lập | Giám đốc vận hành |
+| 2 · Ba yếu tố nhạy nhất | Làm lại gấp đôi **+51,8%**, xem lại gấp đôi **+40,7%**, lương tăng 25% khiến chi phí **+23,1%** [simulated] (CP2/B1). | Giả lập | Giám đốc vận hành |
+| 3 · So với nhân viên | Mốc **12.000 đ/yêu cầu**; trợ lý cộng 222 ca nhân viên làm thay: **5.865 đ/yêu cầu [simulated]**. Phạm vi nội địa + hàng nặng, đã cộng cố định 40 triệu/tháng ở quy mô 45.000 yêu cầu/tháng: **4.599 đ/việc [simulated]** (A4). | Giả lập | Giám đốc vận hành |
+| 4 · Chỉ số chính/dùng/an toàn | Đóng ≤24 giờ, không mở lại 7 ngày: **82,83% (994/1.200)**; sửa/bỏ gợi ý: **27,12% (48/177)**; mở lại: **4,25% (51/1.200)**. E1 có **10 event với `trace_id`** trên nhánh `feat/cp5-metrics` (chưa merge). | Xong, có bằng chứng | Trưởng nhóm CSKH |
+| 5 · Lỗi và khắc phục | CP3: **20/20 nhãn trùng (100%)** và **5/5 loại lỗi** có biện pháp đo được (`bang_loi.md`, main `8da7efd`). **Lưu ý:** nhãn Minh được AI hỗ trợ, chưa đạt điều kiện gắn nhãn độc lập. | Xong, có bằng chứng | Product owner trợ lý hoàn phí |
+| 6 · Pilot plan | Baseline **70%**, MDE **+5 điểm**, α=0,05, power mục tiêu **0,80**, ICC=0,02. Nếu chỉ có **859 mẫu hiệu dụng/nhóm**, power đối với +5 điểm khoảng **0,64**; đây là cảnh báo thiết kế, **chưa phải kết quả CP4**. | Chưa | Giám đốc vận hành |
+| 7 · Rủi ro kinh tế | Làm lại gấp đôi **+51,8%**; xem lại gấp đôi **+40,7%** [simulated]. Xem lại 100% khiến chi phí **11.743 đ/việc = 0,98×** mốc thủ công [simulated]. Chờ E2 hoàn thiện biện pháp và owner. | Chưa | Giám đốc vận hành |
 
-**Phạm vi đề xuất để xem xét:** `noi_dia` (824 yêu cầu, **95,0%** thành công) và `hang_nang` (158 yêu cầu, **74,1%**); chưa đưa `quoc_te` (**27,3%** thành công; **22.515 đ/việc [simulated]**) vào phạm vi pilot. Chốt phạm vi theo thảo luận nhóm khi có CP4.
+**Phạm vi pilot đề xuất:** chỉ `noi_dia` (**95,0%** thành công) + `hang_nang` (**74,1%**); chưa đưa `quoc_te` (**27,3%**, **22.515 đ/việc [simulated]**) vào pilot.
 
-**Lưu ý về so sánh chi phí:** 5.865 đ/**yêu cầu** đã cộng xử lý thay để so với 12.000 đ/**yêu cầu**; còn 4.599 đ/**việc thành công** là chỉ số khác mẫu số và gắn với quy mô giả định 45.000 yêu cầu/tháng. Không lấy chỉ số của đợt chạy thử làm kết luận agent **đã cải thiện** KPI vì chưa có nhóm đối chứng.
-
-**Đề xuất Gate 2a — chưa quyết định:** Chỉ lựa chọn **Go / Go có điều kiện / No-go** sau khi có kết quả độc lập CP3, CP4 hợp lệ, CP5 được đối chiếu và cả nhóm thống nhất. Nếu Go có điều kiện: ghi rõ từng điều kiện, vai trò chịu trách nhiệm và ngày kiểm tra; nếu No-go: chỉ rõ việc phải sửa trước khi đánh giá lại.
+**Đề xuất dự thảo: Go có điều kiện.** (1) **Giám đốc vận hành** duyệt lại cỡ mẫu, power và đối chứng trong CP4; (2) **Trưởng nhóm kỹ thuật** xác nhận ba luật dừng có ngưỡng/thời hạn và phương án rollback; (3) **Trưởng nhóm CSKH** xác nhận ngưỡng an toàn và giám sát chi phí xem lại, tránh vượt mốc 12.000 đ/việc. **Mốc rà soát theo phân công: 16:50–17:00, 21/11/2026.** Nếu CP4/E2 hoặc điều kiện an toàn chưa đạt thì **không chốt Go**; trình phương án No-go/đánh giá lại. Quyết định cuối cùng cần nhóm xác nhận.
