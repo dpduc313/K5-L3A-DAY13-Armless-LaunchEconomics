@@ -52,7 +52,7 @@ Cách tự kiểm tra:
 
 - Mọi con số đều đối chiếu với output `python lab13.py` của nhóm và số tham khảo trong `docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md`.
 - Đọc lại và đồng ý với danh sách event, bảng khắc phục, D2 trước khi merge.
-- Chạy `yaml.safe_load`, grep dấu `?` trong `pilot_plan.yaml` và `grep -rni production report/team` trước khi merge.
+- Chạy `yaml.safe_load`, grep dấu `?` trong `pilot_plan.yaml` và lệnh grep kiểm tra từ cấm trong `report/team` (xem `CHECKPOINTS.md`, CP5) trước khi merge.
 
 ## 6. Tự đánh giá
 
