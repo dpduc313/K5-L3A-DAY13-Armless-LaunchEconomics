@@ -4,7 +4,7 @@
 
 - Họ tên: Đỗ Cao Cường
 - MSSV: 2A202603612
-- Email:
+- Email: 26ai.cuongdc@vinuni.edu.vn
 - GitHub: cuongdc03
 - Nhóm: Armless · Lớp: L3A
 - Vai trong nhóm (người viết code, người kiểm số, người gắn nhãn 1, người gắn nhãn 2 kiêm giữ hồ sơ): **Người gắn nhãn 1**, kiêm theo dõi điều kiện "Xong khi" của từng checkpoint.
