@@ -13,7 +13,7 @@
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 | Đức |      |       |        | Người viết code (trước giải lao) → người kiểm số |
 |   2 | Đạt |      |       |        | Người kiểm số (trước giải lao) → người viết code |
-|   3 | Cường |      |       |        | Người gắn nhãn 1 |
+|   3 | Đỗ Cao Cường | 2A202603612 | 26ai.cuongdc@vinuni.edu.vn | https://github.com/cuongdc03 | Người gắn nhãn 1 |
 |   4 | Nguyễn Văn Minh | 2A202603551 | minhvjjp@gmail.com | https://github.com/killy-mv/ | Người gắn nhãn 2, kiêm giữ hồ sơ |
 
 Bốn vai của lab:
